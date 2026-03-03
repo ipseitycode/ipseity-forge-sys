@@ -12,15 +12,15 @@ require 'widget/IpseityForgePageWidget.php';
 $configuration = new IpseityForgeConfiguration();
 
 $status = $_GET['status'] ?? null;
-$layout = $_GET['layout'] ?? null;
+$sistema = $_GET['sistema'] ?? null;
 
 if ($status) {
-    $layoutLista = $configuration->filtrarPorStatus($status);
-} elseif ($layout) {
-    $layoutLista = $configuration->filtrarPorBusca($layout);
+    $sistemaLista = $configuration->filtrarPorStatus($status);
+} elseif ($sistema) {
+    $sistemaLista = $configuration->filtrarPorBusca($sistema);
 } else {
-    $layoutLista = $configuration->configurarLayout();
+    $sistemaLista = $configuration->configurarSistema();
 }
 
 $page = new IpseityForgePageWidget();
-$page->page($layoutLista);
+$page->page($sistemaLista);
