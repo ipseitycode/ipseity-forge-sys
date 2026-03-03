@@ -17,28 +17,28 @@ $layoutValue = $_GET['layout'] ?? null;
             </a> 
         </div>
 
-        <a href="https://busqe.com/sites-dev/labs/ipseitystudios/sistemas/ipseity-Forge-sys/home/" class="search-widget__logo">
+        <a href="https://busqe.com/sites-dev/labs/ipseity-forge-sys/home/" class="search-widget__logo">
             <div class="search-widget__logo_text">
-                IPSEITY-Forge-SYS
+                IPSEITY-FORGE-SYS
             </div>
         </a>  
 
         <div class="search-widget__search">
             <form 
             class="search-widget__search_bar" 
-            action="https://busqe.com/sites-dev/labs/ipseitystudios/sistemas/ipseity-Forge-sys/home/" 
+            action="https://busqe.com/sites-dev/labs/ipseity-forge-sys/home/" 
             method="GET">
 
                 <input 
                 class="search-widget__search_input" 
                 type="text" 
-                name="layout" 
+                name="sistema" 
                 id="search-hidden-input"
 
-                <?php if (!empty($layoutValue)): ?>
-                    value="<?= htmlspecialchars($layoutValue) ?>"
+                <?php if (!empty($sistemaValue)): ?>
+                    value="<?= htmlspecialchars($sistemaValue) ?>"
                 <?php else: ?>
-                    placeholder="Buscar Layout"
+                    placeholder="Buscar Sistema"
                 <?php endif; ?>
                 >
 

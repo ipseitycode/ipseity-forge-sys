@@ -3,7 +3,7 @@
 class IpseityForgePageWidget {
 
 
-    public function page($layoutLista) {
+    public function page($sistemaLista) {
     ?>
         <!DOCTYPE html>
         <html lang="pt-BR">
@@ -32,8 +32,8 @@ class IpseityForgePageWidget {
                 </div>
                 <div class="page__body">
                 <?
-                    $this->tabs($layoutLista);
-                    $this->card($layoutLista);
+                    $this->tabs($sistemaLista);
+                    $this->card($sistemaLista);
                 ?>
                 </div>
                 <div class="page__footer">
@@ -44,7 +44,7 @@ class IpseityForgePageWidget {
     <?
     }
 
-    public function card($layoutLista) { 
+    public function card($sistemaLista) { 
 
         $mapStatus = [
             1 => 'danger',    // cancelado
@@ -56,7 +56,7 @@ class IpseityForgePageWidget {
 
         foreach (range('A', 'Z') as $letra) {
 
-            $itensDaLetra = array_filter($layoutLista, function($item) use ($letra) {
+            $itensDaLetra = array_filter($sistemaLista, function($item) use ($letra) {
                 return strtoupper(substr($item['nome'], 0, 1)) === $letra
                     && $item['publicar'] != 0;
             });
@@ -71,7 +71,7 @@ class IpseityForgePageWidget {
 
                     <?php if (empty($itensDaLetra)): ?>
                         <div class="bridgecard-widget__main-subtitle">
-                            Nenhum layout foi encontrado com essa letra
+                            Nenhum sistema foi encontrado com essa letra
                         </div>
                     <?php endif; ?>
                 </div>
@@ -117,7 +117,7 @@ class IpseityForgePageWidget {
         }
     }
 
-    public function tabs($layoutLista) { 
+    public function tabs($sistemaLista) { 
     ?>
         <nav class="tabs-widget">
             <ul class="tabs-widget__list">
