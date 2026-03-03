@@ -37,7 +37,7 @@ class IpseityForgeConfiguration {
 
     }
 
-    public function configurarLayout(): array {
+    public function configurarSistema(): array {
         
         // vermelho - 1 = cancelado
         // verde    - 2 = fazendo
@@ -45,56 +45,20 @@ class IpseityForgeConfiguration {
         // azul     - 4 = concluido
         // cinza    - 5 = indefinido
 
-        $layouts = [
+        $sistemas = [
 
-            'advantage' => [
+            'session' => [
                 'id' => 1,
-                'url' => 'advantage-layout',
-                'nome' => 'advantage',
-                'categoria' => 'layout',
-                'publicar' => 0,
-                'status' => 2,
-            ],
-
-            'accordion' => [
-                'id' => 2,
-                'url' => 'accordion-layout',
-                'nome' => 'accordion',
-                'categoria' => 'layout',
+                'url' => 'session-system',
+                'nome' => 'session',
+                'categoria' => 'system',
                 'publicar' => 1,
                 'status' => 2,
-            ],
-
-            'productgrid' => [
-                'id' => 3,
-                'url' => 'productgrid-layout',
-                'nome' => 'productgrid',
-                'categoria' => 'layout',
-                'publicar' => 1,
-                'status' => 4,
-            ],
-
-            'productbridge' => [
-                'id' => 4,
-                'url' => 'productbridge-layout',
-                'nome' => 'productbridge',
-                'categoria' => 'layout',
-                'publicar' => 1,
-                'status' => 4,
-            ],
-
-            'productbridge' => [
-                'id' => 4,
-                'url' => 'productbridge-layout',
-                'nome' => 'productbridge',
-                'categoria' => 'layout',
-                'publicar' => 1,
-                'status' => 4,
             ],
 
         ];
 
-        return $layouts;
+        return $sistemas;
     }
 
     function filtrarPorStatus($status)
@@ -115,11 +79,11 @@ class IpseityForgeConfiguration {
 
         $statusNumero = $mapStatus[$status];
 
-        // Pega todos os layouts
-        $layouts = $this->configurarLayout();
+        // Pega todos os sistemas
+        $sistemas = $this->configurarSistema();
 
         // Filtra pelo status
-        $filtrados = array_filter($layouts, function($item) use ($statusNumero) {
+        $filtrados = array_filter($sistemas, function($item) use ($statusNumero) {
             return $item['status'] == $statusNumero;
         });
 
@@ -132,10 +96,10 @@ class IpseityForgeConfiguration {
 
         // Se busca vazia, retorna todos
         if (empty($busca)) {
-            return $this->configurarLayout();
+            return $this->configurarSistema();
         }
 
-        $layouts = $this->configurarLayout();
+        $layouts = $this->configurarSistema();
 
         $filtrados = array_filter($layouts, function($item) use ($busca) {
 
