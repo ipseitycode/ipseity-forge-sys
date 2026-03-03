@@ -1,0 +1,109 @@
+# GERADOR OFICIAL DE LAYOUT
+# Biblioteca: ipseity-Forge-sys
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 1. CONTEXTO OBRIGATÓRIO
+
+Você está gerando um layout para a biblioteca ipseity-Forge-sys.
+
+ANTES de qualquer geração de código:
+
+- Leia COMPLETAMENTE o arquivo: .agent/skills/layout-creation/SKILL.md
+- Siga TODAS as regras definidas na SKILL.
+- Respeite nomenclatura.
+- Respeite semântica HTML.
+- Respeite organização estrutural.
+- Não ignore nenhuma regra da SKILL.
+- Não improvise padrões fora da SKILL.
+- Não explique o processo.
+
+A SKILL é soberana.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 2. IDENTIFICAÇÃO DO LAYOUT
+
+Nome base do layout:
+productbridge
+
+Finalidade do layout:
+A finalidade desse layout em poucas palavras Layout de listagem vertical de produtos para e-commerce, exibindo múltiplos itens em sequência com imagem à esquerda e informações detalhadas à direita, incluindo título, preço, avaliações, condição do produto, disponibilidade de estoque e detalhes de entrega, otimizado para navegação e comparação rápida de produtos similares.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 3. REFERÊNCIA VISUAL
+
+Imagem anexada:
+SIM
+
+────────────────────────────────
+
+SE a resposta for "SIM":
+
+- Analise profundamente a imagem.
+- Extraia estrutura visual real.
+- Identifique grid, alinhamentos e proporções.
+- Identifique módulos repetíveis.
+- Identifique hierarquia visual.
+- Reconstrua a estrutura de forma fiel, mas adaptada às regras da SKILL.
+- Não invente elementos que não existam na imagem.
+- A descrição textual serve apenas como complemento.
+
+────────────────────────────────
+
+SE a resposta for "NÃO":
+
+A descrição abaixo será a única fonte de referência estrutural.
+
+Descrição visual detalhada:
+[Descrever aqui o layout com o máximo de precisão possível]
+
+O agente deve:
+
+- Interpretar a descrição como especificação técnica.
+- Definir estrutura coerente baseada em flex.
+- Definir estrutura modular reutilizável.
+- Definir proporções consistentes.
+- Tomar decisões estruturais profissionais baseadas em boas práticas.
+- Aplicar identidade visual coerente.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 4. SISTEMA DE CORES
+
+A cor base dos elementos da imagem deve ser:
+
+- A mesma da imagem, OU
+- Definida explicitamente na descrição
+
+Não utilizar sistema externo de configuração de cor.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 5. ESTRUTURA DE ARQUIVOS
+
+Escrever o código dentro dos seguintes arquivos existentes:
+
+HTML:
+[nome]-layout/assets/html/ipseity-[nome].html
+
+CSS:
+[nome]-layout/assets/css/ipseity-[nome].css
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 6. SAÍDA FINAL
+
+O agente deve:
+
+1. Criar fisicamente todos os arquivos na estrutura informada.
+2. Utilizar a arquitetura real do projeto.
+3. Gerar arquivo HTML
+4. Gerar arquivo CSS
+5. Separar claramente cada arquivo
+6. Indicar o caminho completo antes do código
+7. Não explicar o que fez
+8. Não justificar decisões
+9. Entregar apenas o resultado final estruturado

@@ -1,0 +1,81 @@
+.frame-widget {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    max-width: 1280px;
+    height: auto;
+    padding: 32px 32px;
+    gap: 32px;
+    overflow: hidden;
+    border-radius: 18px;
+    font-family: "Raleway Regular", Arial, sans-serif;
+    background-color: #0D1B2A;
+    XXXborder: 1px solid red;
+}
+
+.frame-widget * {
+    XXborder: 1px solid red;
+}
+
+.frame-widget__letter {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    gap: 8px;
+    padding: 0px;
+}
+
+.frame-widget__letter * {
+    XXXborder: solid 1px red;
+}
+
+.frame-widget__main-title {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+    min-height: auto;
+    padding: 0px 0px 0px 0px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.frame-widget__main-subtitle {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+    min-height: auto;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.frame-widget__area {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    min-height: 512px;
+    padding: 32px;
+    gap: 48px;
+    overflow: hidden;
+    background-color: #FAF9F8;
+    border-radius: 18px;
+}
+
+@media (max-width: 1152px) {}
+
+@media (max-width: 832px) {}

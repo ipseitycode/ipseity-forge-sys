@@ -1,0 +1,763 @@
+/*BRIDGECARD WIDGET*/
+.bridgecard-widget {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    max-width: 1280px;
+    height: auto;
+    padding: 32px;
+    gap: 16px;
+    overflow: hidden;
+    font-family: "Raleway Regular", Arial, sans-serif;
+    XXXborder: 2px solid #ccc;
+}
+
+.bridgecard-widget * {
+    XXXborder: 1px solid red;
+}
+
+.bridgecard-widget__letter {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    gap: 8px;
+    padding: 0px;
+}
+
+.bridgecard-widget__letter * {
+    XXXborder: solid 1px red;
+}
+
+.bridgecard-widget__main-title {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+    min-height: auto;
+    padding: 0px 0px 6px 0px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333333;
+    border-bottom: 1px solid #e4e2e2;
+}
+
+.bridgecard-widget__main-subtitle {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+    min-height: auto;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333333;
+}
+
+.bridgecard-widget__area {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    height: auto;
+    padding: 8px;
+    gap: 16px;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+/*bridgecard SMALL*/
+.bridgecard-widget__small {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-content: center;
+    width: 368px;
+    height: 184px;
+    overflow: hidden;
+    border-radius: 0px;
+    cursor: auto;
+    gap: 12px;
+    padding: 16px;
+    border: #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    transition: transform 0.25s ease, opacity 0.25s ease, box-shadow 0.25s ease;
+    ;
+    /* Transição suave */
+    transform-origin: center;
+}
+
+.light {
+    background-color: #f8f9fa;
+}
+
+.danger {
+    background-color: #dc3545;
+}
+
+.success {
+    background-color: #198754;
+}
+
+.primary {
+    background-color: #0d6efd;
+}
+
+.warning {
+    background-color: #ffc107;
+}
+
+.info {
+    background-color: #0dcaf0;
+}
+
+.secondary {
+    background-color: #6c757d;
+}
+
+.bridgecard-widget__small:hover {
+    XXXopacity: 0.96;
+    transform: scale(1.02);
+    cursor: pointer;
+    XXXbox-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.bridgecard-widget__small:focus {
+    outline: 0;
+}
+
+.bridgecard-widget__small.disabled,
+.bridgecard-widget__small:disabled {
+    opacity: 0.96;
+    pointer-events: none;
+}
+
+.bridgecard-widget__small_area {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    gap: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none !important;
+}
+
+.bridgecard-widget__small_icon {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 32px;
+    height: auto;
+    overflow: hidden;
+}
+
+.bridgecard-widget__small_icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 2px;
+    overflow: hidden;
+    user-select: none;
+}
+
+.bridgecard-widget__small_icon-wrapper img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    filter: invert(1);
+    /* filter: brightness(0) saturate(100%) invert(12%) sepia(4%) saturate(377%) hue-rotate(169deg) brightness(96%) contrast(93%); */
+}
+
+.bridgecard-widget__small-description {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 290px;
+    height: 100%;
+    gap: 8px;
+    overflow: hidden;
+}
+
+.bridgecard-widget__small-description_name {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+    min-height: 32px;
+    padding: 2px 0px 0px 0px;
+    overflow: hidden;
+    white-space: normal;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.bridgecard-widget__small-description_info {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+    min-height: 20px;
+    padding: 2px;
+    overflow: hidden;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    white-space: normal;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #ffffff;
+    text-decoration: none !important;
+}
+
+@media (max-width: 1152px) {
+
+    .bridgecard-widget {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        width: 100%;
+        max-width: 1280px;
+        height: auto;
+        padding: 16px 0px;
+        gap: 16px;
+        overflow: hidden;
+        font-family: "Raleway Regular", Arial, sans-serif;
+        XXXborder: 2px solid #ccc;
+    }
+
+    .bridgecard-widget * {
+        XXXborder: 1px solid red;
+    }
+
+    .bridgecard-widget__letter {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        gap: 8px;
+        padding: 0px;
+    }
+
+    .bridgecard-widget__letter * {
+        XXXborder: solid 1px red;
+    }
+
+    .bridgecard-widget__main-title {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        width: 100%;
+        min-height: auto;
+        padding: 0px 0px 6px 0px;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+        color: #333333;
+        border-bottom: 1px solid #e4e2e2;
+    }
+
+    .bridgecard-widget__main-subtitle {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        width: 100%;
+        min-height: auto;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        color: #333333;
+    }
+
+    .bridgecard-widget__area {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: start;
+        width: 100%;
+        height: auto;
+        padding: 8px;
+        gap: 16px;
+        overflow: hidden;
+        flex-wrap: wrap;
+    }
+
+    .bridgecard-widget__main-amount {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        width: 100%;
+        min-height: auto;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        color: #333333;
+    }
+
+    .bridgecard-widget__erro {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        min-width: 256px;
+        height: auto;
+        padding: 8px 16px;
+        gap: 8px;
+        overflow: hidden;
+        cursor: auto;
+        border-radius: 6px;
+        font-family: "Raleway Regular", Arial, sans-serif;
+        border-left: 5px solid #fb0404;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.10);
+        text-decoration: none;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .bridgecard-widget__erro_container {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: start;
+        width: 100%;
+        height: 32px;
+        gap: 0px;
+        overflow: hidden;
+    }
+
+    .bridgecard-widget__erro_icon {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 32px;
+        overflow: hidden;
+    }
+
+    .bridgecard-widget__erro_icon-wrapper {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        height: 32px;
+        width: 32px;
+        padding: 6px;
+        overflow: hidden;
+    }
+
+    .bridgecard-widget__erro_icon-wrapper img {
+        height: 100%;
+        width: 100%;
+        XXXfilter: invert(1);
+        object-fit: cover;
+    }
+
+    .bridgecard-widget__erro-main {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        width: auto;
+        min-height: 32px;
+        padding: 2px;
+        overflow: hidden;
+        font-family: 'Press Start 2P', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .bridgecard-widget__erro-caption {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        width: auto;
+        height: auto;
+        padding: 2px;
+        overflow: hidden;
+        font-style: italic !important;
+        font-size: 14px;
+        font-weight: 500;
+        color: #212529;
+        text-decoration: none;
+    }
+
+    /*bridgecard SMALL*/
+    .bridgecard-widget__small {
+        display: flex;
+        flex-shrink: 0;
+        flex-direction: column;
+        align-content: center;
+        width: 368px;
+        height: 184px;
+        overflow: hidden;
+        border-radius: 0px;
+        cursor: auto;
+        gap: 12px;
+        padding: 16px;
+        border: #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        text-decoration: none;
+        transition: transform 0.25s ease, opacity 0.25s ease, box-shadow 0.25s ease;
+        ;
+        /* Transição suave */
+        transform-origin: center;
+    }
+
+    .bridgecard-widget__small:hover {
+        XXXopacity: 0.96;
+        /* Leve transparência */
+        transform: scale(1.02);
+        /* Pequena aproximação */
+        cursor: pointer;
+        /* Indica interatividade */
+        XXXbox-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    }
+
+    .bridgecard-widget__small:focus {
+        outline: 0;
+    }
+
+    .bridgecard-widget__small.disabled,
+    .bridgecard-widget__small:disabled {
+        opacity: 0.96;
+        pointer-events: none;
+    }
+
+    .bridgecard-widget__small_area {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+        gap: 12px;
+        overflow: hidden;
+        cursor: pointer;
+        user-select: none;
+        text-decoration: none !important;
+    }
+
+    .bridgecard-widget__small_icon {
+        display: flex;
+        flex-shrink: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        width: 32px;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .bridgecard-widget__small_icon-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        padding: 2px;
+        overflow: hidden;
+        user-select: none;
+    }
+
+    .bridgecard-widget__small_icon-wrapper img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        filter: invert(1);
+        /* filter: brightness(0) saturate(100%) invert(12%) sepia(4%) saturate(377%) hue-rotate(169deg) brightness(96%) contrast(93%); */
+    }
+
+    .bridgecard-widget__small-description {
+        display: flex;
+        flex-shrink: 0;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        width: 290px;
+        height: 100%;
+        gap: 8px;
+        overflow: hidden;
+    }
+
+    .bridgecard-widget__small-description_name {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        width: 100%;
+        min-height: 32px;
+        padding: 2px 0px 0px 0px;
+        overflow: hidden;
+        white-space: normal;
+        font-family: 'Press Start 2P', sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .bridgecard-widget__small-description_info {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        width: 100%;
+        min-height: 20px;
+        padding: 2px;
+        overflow: hidden;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+        white-space: normal;
+        font-family: 'Press Start 2P', sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        color: #ffffff;
+        text-decoration: none !important;
+    }
+}
+
+@media (max-width: 832px) {
+
+    .bridgecard-widget {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        width: 100%;
+        max-width: 1280px;
+        height: auto;
+        padding: 8px 8px;
+        gap: 16px;
+        overflow: hidden;
+        font-family: "Raleway Regular", Arial, sans-serif;
+        XXXborder: 2px solid #ccc;
+    }
+
+    .bridgecard-widget * {
+        XXXborder: 1px solid red;
+    }
+
+    .bridgecard-widget__letter {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        gap: 8px;
+        padding: 0px;
+    }
+
+    .bridgecard-widget__letter * {
+        XXXborder: solid 1px red;
+    }
+
+    .bridgecard-widget__main-title {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        width: 100%;
+        min-height: auto;
+        padding: 6px 0px 6px 0px;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        color: #333333;
+        border-bottom: 1px solid #e4e2e2;
+    }
+
+    .bridgecard-widget__main-subtitle {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        width: 100%;
+        min-height: auto;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        color: #333333;
+    }
+
+    .bridgecard-widget__area {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        width: 100%;
+        height: auto;
+        padding: 8px 0px;
+        gap: 16px;
+        overflow: hidden;
+        flex-wrap: nowrap;
+    }
+
+    /*bridgecard SMALL*/
+    .bridgecard-widget__small {
+        display: flex;
+        flex-shrink: 0;
+        flex-direction: column;
+        align-content: center;
+        width: 100%;
+        height: 184px;
+        overflow: hidden;
+        border-radius: 0px;
+        cursor: auto;
+        gap: 12px;
+        padding: 16px;
+        border: #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        text-decoration: none;
+        transition: transform 0.25s ease, opacity 0.25s ease, box-shadow 0.25s ease;
+        ;
+        /* Transição suave */
+        transform-origin: center;
+    }
+
+    .bridgecard-widget__small:hover {
+        XXXopacity: 0.96;
+        transform: scale(1.00);
+        cursor: pointer;
+        XXXbox-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    }
+
+    .bridgecard-widget__small:focus {
+        outline: 0;
+    }
+
+    .bridgecard-widget__small.disabled,
+    .bridgecard-widget__small:disabled {
+        opacity: 0.96;
+        pointer-events: none;
+    }
+
+    .bridgecard-widget__small_area {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+        gap: 12px;
+        overflow: hidden;
+        cursor: pointer;
+        user-select: none;
+        text-decoration: none !important;
+    }
+
+    .bridgecard-widget__small_icon {
+        display: flex;
+        flex-shrink: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        width: 32px;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .bridgecard-widget__small_icon-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        padding: 2px;
+        overflow: hidden;
+        user-select: none;
+    }
+
+    .bridgecard-widget__small_icon-wrapper img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        filter: invert(1);
+        /* filter: brightness(0) saturate(100%) invert(12%) sepia(4%) saturate(377%) hue-rotate(169deg) brightness(96%) contrast(93%); */
+    }
+
+    .bridgecard-widget__small-description {
+        display: flex;
+        flex-shrink: 0;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        width: 100%;
+        height: 100%;
+        gap: 8px;
+        overflow: hidden;
+    }
+
+    .bridgecard-widget__small-description_name {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        width: 100%;
+        min-height: 32px;
+        padding: 3px 0px 0px 0px;
+        overflow: hidden;
+        white-space: normal;
+        font-family: 'Press Start 2P', sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .bridgecard-widget__small-description_info {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        width: 100%;
+        min-height: 20px;
+        padding: 2px;
+        overflow: hidden;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+        white-space: normal;
+        font-family: 'Press Start 2P', sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        color: #ffffff;
+        text-decoration: none !important;
+    }
+
+}
